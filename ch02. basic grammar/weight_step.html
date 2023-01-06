@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>적정 체중 테스트</title>
+</head>
+<script>
+    var Name = prompt("이름을 입력하세요.");
+    var Height = prompt("키를 입력하세요.");
+    var Weight = prompt("몸무게를 입력하세요.");
+
+    var normal_w = (Height - 100)*0.9;
+    var result;
+    if(Weight <= normal_w -5){
+        result = "체중 미달입니다.";
+    }else if(Weight >= normal_w +5){
+        result = "과체중 입니다.";
+    }else{
+        result = "적정 체중입니다.";
+    }
+    document.write(Name + "님은 " + Weight + "kg로 " + result, "<br>");
+    document.write((normal_w - 5)    + " <= 적정 체중 <= " + (normal_w + 5), "<br>");
+</script>
+<body>
+    
+</body>
+</html>
