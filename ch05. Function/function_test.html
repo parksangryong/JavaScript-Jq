@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            function CheckWeight(name, height, weight){
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+
+            this.getInfo = function(){
+                var str ="";
+                str += "이름: " +this.userName+ ", ";
+                str += "키: " +this.userHeight+ ", ";
+                str += "몸무게: " +this.userWeight+ "<br>";
+                return str;
+            }
+
+            this.getResult = function(){
+                this.minWeight = (this.userHeight - 100)*0.9 -5;
+                this.maxWeight = (this.userHeight - 100)*0.9 +5;
+
+                if(this.userWeight < this.minWeight){
+                    return "정상 몸무게에 미달, 저체중입니다.";
+                }else if(this.userWeight > this.maxWeight){
+                    return "정상 몸무게를 초과, 과체중입니다.";
+                }else{
+                    return "정상 몸무게입니다.";
+                }
+            }
+        }
+
+        var m_name = prompt("이름은 무엇입니까?","");
+        var m_height = Number(prompt("키는 몇입니까?", "0"));
+        var m_weight = Number(prompt("몸무게는 몇입니까?", "0"));
+
+        var me = new CheckWeight(m_name, m_height, m_weight);
+        var jang = new CheckWeight("장보리", 168, 62);
+        var park = new CheckWeight("박달재", 180, 88);
+        console.log(me);
+        console.log(jang);
+        console.log(park);
+
+        document.write(me.getInfo());
+        document.write(me.getResult());
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
