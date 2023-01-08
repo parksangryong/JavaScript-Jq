@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".btn1").on("click", function(){
+                $(".box").slideUp(1000, "linear", function(){
+                    $(".btn1").hide();
+                    $(".btn2").show();
+                })
+            });
+            $(".btn2").on("click", function(){
+                $(".box").fadeIn(1000, "swing", function(){
+                    $(".btn1").show();
+                    $(".btn2").hide();
+                })
+            });
+            $(".btn3").on("click", function(){
+                $(".box").slideToggle(1000, "linear");
+            });
+            $(".btn4").on("click", function(){
+                $(".box").fadeTo("fast", 0.3)
+            });
+            $(".btn5").on("click", function(){
+                $(".box").fadeTo("fast", 1);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <button class="btn1">slideUp</button>
+        <button class="btn2">fadeIn</button>
+    </p>
+    <p>
+        <button class="btn3">toggleSlide</button>
+    </p>
+    <p>
+        <button class="btn4">fadeTo(0,3)</button>
+        <button class="btn5">fadeTo(1)</button>
+    </p>
+    <div class="box">
+        한자로는 묘(猫)라 하고, 수고양이를 낭묘(郎猫), 암고양이를 여묘(女猫), 얼룩고양이를 표화묘(豹花猫), 들고양이를 야묘(野猫)로 부르기도 한다. 현재 집에서 기르고 있는 모든 애완용 고양이는 아프리카·남유럽·인도에 걸쳐 분포하는 리비아고양이(Felis silvestris lybica)를 사육 순화시킨 것으로, 전세계에서 2억 마리가 넘게 사육되는 것으로 알려져 있다. 약 5,000년 전 아프리카 북부 리비아산(産)의 야생고양이가 고대 이집트인에 의해 길들여져서 점차 세계 각지에 퍼졌다고 한다. 이것은 고대 이집트의 벽화 ·조각, 고양이의 미라 등으로 미루어 명확하지만, 그것이 현재 사육되는 모든 고양이의 조상인지는 의문이다.
+    </div>
+</body>
+</html>
