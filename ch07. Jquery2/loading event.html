@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(document).ready(function(){
+                var h1 = $(".img1").height();
+                console.log("ready : ", h1);
+            }); //html 전체 요소 로딩되면 실행
+
+            $(window).load(function(){
+                var h2 = $(".img1").height();
+                console.log("load : ", h2);
+            }); //외부소스(이미지)가 완전히 로딩되면 실행
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <img src="http://place-hold.it/300X300" class="img1">
+    </p>
+</body>
+</html>
