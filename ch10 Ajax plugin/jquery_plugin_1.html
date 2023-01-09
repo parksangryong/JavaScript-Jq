@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .layer_popup img{ 
+            width: 250px; height: 250px; padding: 0.5em;
+        }
+        .layer_popup{
+            position: absolute; left: 50px; top: 50px; cursor: move;
+        }
+    </style>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $( function() {
+            $( ".layer_popup" ).draggable();
+        } );
+    </script>
+</head>
+<body>
+    <div class="layer_popup">
+        <img src="images/pic_1.jpg" alt="">
+      </div>
+</body>
+</html>
